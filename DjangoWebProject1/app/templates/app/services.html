@@ -1,0 +1,19 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load staticfiles %}
+
+<div class="row">
+    <div class="col-md-4">
+         <a class="btn btn-default" href="https://www.delta.ru/pozharnaya-signalizaciya/">
+             <img src="{% static 'app/img/delta.png ' %}" class="img-responsive" alt="logo"></a>
+        <h2>Разработка и организация сетей связи</h2>
+        <p>
+            Поиск и разработка оптимальных решений в организации сетей связи
+        </p>
+        <p><a class="btn btn-default" href="{% url 'services' %}">Learn more &raquo;</a></p>
+    </div>
+</div> 
+
+{% endblock %}

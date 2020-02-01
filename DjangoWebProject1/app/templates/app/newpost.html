@@ -1,0 +1,21 @@
+﻿{% extends "app/layout.html" %} 
+ 
+{% block content %} 
+
+{% if user.is_authenticated %}
+   <h3 id="google-font">Добавить комментарий</h3>
+   <form method="POST" enctype="multipart/form-data">{% csrf_token %} {# защита от атак CSRF#}
+   <table class="mewpost-content">
+      {{ form.as_table }}
+   </table>
+    <button type="submit" class="save btn btn-default btn-margin"> Сохранить статью </button>
+</form>
+{% else %}
+    <h3 id="google-font">Доступно только для администратора</h3>
+{% endif %}
+
+
+
+
+
+{% endblock %} 
